@@ -7,6 +7,12 @@ See IS_US layout in file layout.txt
 `
 in the installation directory.
 
+#### To uninstall, run:
+`
+./uninstall.sh
+` 
+in the installation directory.
+
 To revert back to US layout:
 `
 setxkbmap us

@@ -1,0 +1,3 @@
+<layout><configItem><name>is_us</name><shortDescription>is_us</shortDescription><description>English(US)+Icelandic</description><languageList><iso639Id>isus</iso639Id></languageList></configItem><variantList></variantList></layout>
+
+

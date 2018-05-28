@@ -4,59 +4,6 @@
 // modified from Debian /usr/share/X11/xkb/symbols/us
 // modified by Gamithra from Xorg Gamithra layout driver by Ansyg Zu (anseok@gmail.com)
 
-// to install, run "sudo cp is_us /usr/share/X11/xkb/symbols"
-// to use the is_us layout, run "setxkbmap is_us"
-// to revert to the US layout, run "setxkbmap us"
-
-
-// Overview
-// --------
-//
-// The IS_US layout is obtained from the US-International layout by
-// swapping the dead keys with their AltGr values, making it a strict
-// superset of the US layout, and then adding the non-breaking space and
-// punctuation marks commonly used in Western European languages.  
-
-// This file was originally a 2017 Christmas present for Gamithra Marga by Anzyg Zu, 
-// and was later modified to support Icelandic.
-
-
-// The Layout (with AltGr pressed)
-// -------------------------------
-//
-//  ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
-//  │   │(¹)│(˝)│(¯)│(£)│(^)│   │   │   │   │   │   │ ÷ │
-//  │   │(¡)│(²)│ ³ │ ¤ │ € │ ¼ │ ½ │ ¾ │ ‘ │ ’ │ ¥ │ × │
-//  └───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬───┐
-//        │   │(Å)│ É │(®)│(Þ)│(Ý)│ Ú │ Í │ Ó │ Ö │ “ │ ” │ ¦ │
-//        │ ™ │(å)│ é │(®)│(þ)│(ý)│ ú │ í │ ó │ ö │ « │ » │ ¬ │
-//        └┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴───┘
-//         │ Á │ Þ │ Ð │   │   │   │   │ Ý │ Æ │[`]│(")│
-//         │ á │ þ │ ð │ — │ – │ „ │ ‚ │ ý │ æ │[´]│(')│
-//         └─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┘
-//           │(Æ)│   │(¢)│   │   │(Ñ)│(µ)│(Ç)│(ˇ)│   │
-//           │(æ)│ · │(©)│ ‹ │ › │(ñ)│(µ)│(ç)│(˙)│ ¿ │
-//           └───┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴───┘
-//                  │                      │
-//                  │  non-breaking space  │
-//                  └──────────────────────┘
-//
-// When AltGr is not pressed, the layout is identical to the US layout.
-//
-// The added punctuation names and their positions are as follows:
-//
-//  F: Em-dash
-//  G: En-dash
-//  H: Low double curved quote, left
-//  J: Low single curved quote, left
-//  X: Interpunct
-//  V: Single angle quote, left
-//  B: Single angle quote, right
-
-
-
-// Definition
-// ----------
 
 default  partial alphanumeric_keys
 xkb_symbols "basic" {
@@ -88,9 +35,3 @@ xkb_symbols "basic" {
     key <SPCE> { [ space, space, nobreakspace, NoSymbol ] };
 };
 
-
-// Bugs
-// ----
-//
-// Many diacritic-letter combinations do not compose.  Fixing it is
-// outside the scope of an XKB layout definition.
